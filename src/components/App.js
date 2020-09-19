@@ -14,15 +14,15 @@ const App = () => {
 
   return (
     <div className="ui container">
+      {/* <div className="row"> */}
       <SearchBar onSearchTermSubmit={search}> </SearchBar>
-      <div className="ui grid">
-        <div className="ui row">
-          <div className="eleven wide column">
-            <VideoDetail video={selectedVideo}></VideoDetail>
-          </div>
-          <div className="five wide column">
-            <VideoList videos={videos} onVideoSelect={setSelectedVideo} />
-          </div>
+      {/* </div> */}
+      <div className="row">
+        <div className="col-12 col-sm-6 col-lg-8">
+          <VideoDetail video={selectedVideo}></VideoDetail>
+        </div>
+        <div className="col-6 col-lg-4">
+          <VideoList videos={videos} onVideoSelect={setSelectedVideo} />
         </div>
       </div>
     </div>
